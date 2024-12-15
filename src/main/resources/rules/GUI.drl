@@ -1,0 +1,40 @@
+package com.sample;
+
+import org.kie.api.runtime.KieRuntime;
+import javax.swing.*;    
+
+global JFrame frame;
+
+declare GUI_question
+    title : Questions
+    options : Object[]
+end;
+
+declare GUI_result
+    title : Results
+end;
+
+declare Response
+	que : Questions
+    anw : String
+end;
+
+function GUI_question make_question_2(Questions question, Answers a, Answers b) {
+	String[] answerString = new String[] {a.getFullName(), b.getFullName()};
+    GUI_question gui = new GUI_question();
+    gui.setTitle(question);
+    gui.setOptions(answerString);
+    return gui;
+}
+
+function void show_question(JFrame frame, GUI_question gui, KieRuntime kSession) {
+    int n = JOptionPane.showOptionDialog(frame, gui.getTitle().getFullName(), "Expert system", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, gui.getOptions(), gui.getOptions()[0]);
+    Response response = new Response();
+    response.setQue(gui.getTitle());
+    response.setAnw(gui.getOptions()[n].toString());
+    kSession.insert(response);
+}
+
+function void show_result(JFrame frame, Results result) {
+    JOptionPane.showMessageDialog(frame, "Recommended snack: " + result.getFullName(), "Results", JOptionPane.INFORMATION_MESSAGE);  
+}
