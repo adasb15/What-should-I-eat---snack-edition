@@ -5,8 +5,29 @@ declare enum Results
 	great_value("Great Value"),
 	country_rick("Country Rick"),
 	burrito("Tinas Burrito"),
-	fish("Catch a fish")
-	//TODO
+	fish("Catch a fish"),
+	smart_ones("Smart Ones Dessert"),
+	slim_a_bear("Slim a Bear Ice Cream"),
+	lean_cuisine("Lean Cuisine Ravioli"),
+	smart_ones_rice("Smart Ones Rice"),
+	weight_watchers("Weight Watchers"),
+	crisp_crust("Crisp Crust"),
+	tombstone("Tombstone Brick Oven Style"),
+	tony("Tony's Original Crust"),
+	celeste("Celeste Pizza"),
+	stone_hearth("Stone Hearth Pizza"),
+	di_giorno("Di Giorno For One Crust"),
+	freschetta("Freschetta Naturally Rising"),
+	california("California Crispy Thin Crust"),
+	kashi("Kashi Tomato Pizza"),
+	muffin_tops("Muffin Tops"),
+	homestyle("Homestyle Waffels"),
+	toaster_sticks("Toaster Sticks/Pancakes"),
+	bob_evans("Bob Evans Brunch Bowls"),
+	bagel_shoppe("Toaster Bagel Shoppe"),
+	croissant("Croissant Sandwiches"),
+	toaster_strudel("Toaster Strudel")
+	
 
 	;
     
