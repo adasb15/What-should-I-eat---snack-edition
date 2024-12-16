@@ -19,7 +19,7 @@ declare enum Questions
 	benes("Are you Elaine Benes?"),
 	wow("Are you playing Wow?"),
 	foreman("Are you using a Foreman?"),
-	desert("Do you want dessert?"),
+	dessert("Do you want dessert?"),
 	childhood("Are you trying to relive childhood?"),
 	school("Did you just get home from school?"),
 	drunk("Are you high and/or drunk?"),
