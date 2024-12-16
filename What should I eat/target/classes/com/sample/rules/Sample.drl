@@ -1,0 +1,77 @@
+package mypackage
+
+
+// Regu³y do pytañ (TODO)
+
+rule "Japan?"
+when
+    //init
+then
+    GUI_question gui = make_question_2(Questions.japan, Answers.JAPANT, Answers.JAPANF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Unemployment?"
+when
+    Response(que == Questions.japan, anw == Answers.JAPANF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.unemp, Answers.UNEMPT, Answers.UNEMPF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Alaska?"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.alaska, Answers.ALASKAT, Answers.ALASKAF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Regu³y do koñcowych opcji (TODO)
+
+rule "Micro Magic"
+when
+    Response(que == Questions.japan, anw == Answers.JAPANT.getFullName());
+then
+    show_result(frame, Results.micro_magic);
+end;
+
+rule "Great Value"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.great_value);
+end;
+
+rule "Country Rick"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.country_rick);
+end;
+
+rule "Tinas Burrito"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.burrito);
+end;
+
+rule "fish"
+when
+    Response(que == Questions.alaska, anw == Answers.ALASKAT.getFullName());
+then
+    show_result(frame, Results.fish);
+end;

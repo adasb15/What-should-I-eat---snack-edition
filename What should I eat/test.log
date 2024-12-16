@@ -1,0 +1,122 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Japan? [0]</activationId>
+      <rule>Japan?</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Japan? [0]</activationId>
+      <rule>Japan?</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>Response( que=japan, anw=No )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Japan? [0]</activationId>
+      <rule>Japan?</rule>
+      <declarations></declarations>
+      <factHandleIds>0</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Unemployment? [1]</activationId>
+      <rule>Unemployment?</rule>
+      <declarations></declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Unemployment? [1]</activationId>
+      <rule>Unemployment?</rule>
+      <declarations></declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>2</factId>
+      <objectToString>Response( que=unemp, anw=Yes )</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Unemployment? [1]</activationId>
+      <rule>Unemployment?</rule>
+      <declarations></declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Great Value [2]</activationId>
+      <rule>Great Value</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Great Value [2]</activationId>
+      <rule>Great Value</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Great Value [2]</activationId>
+      <rule>Great Value</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Country Rick [2]</activationId>
+      <rule>Country Rick</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Country Rick [2]</activationId>
+      <rule>Country Rick</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Country Rick [2]</activationId>
+      <rule>Country Rick</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Tinas Burrito [2]</activationId>
+      <rule>Tinas Burrito</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Tinas Burrito [2]</activationId>
+      <rule>Tinas Burrito</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Tinas Burrito [2]</activationId>
+      <rule>Tinas Burrito</rule>
+      <declarations></declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>
