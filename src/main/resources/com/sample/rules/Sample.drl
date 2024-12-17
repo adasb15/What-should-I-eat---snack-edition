@@ -1,0 +1,841 @@
+package mypackage
+
+
+rule "Japan?"
+when
+    //init
+then
+    GUI_question gui = make_question_2(Questions.japan, Answers.JAPANT, Answers.JAPANF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Unemployment?"
+when
+    Response(que == Questions.japan, anw == Answers.JAPANF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.unemp, Answers.UNEMPT, Answers.UNEMPF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Alaska?"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.alaska, Answers.ALASKAT, Answers.ALASKAF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Diet?"
+when
+    Response(que == Questions.alaska, anw == Answers.ALASKAF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.diet, Answers.DIETT, Answers.DIETF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Vegetarian?"
+when
+    Response(que == Questions.diet, anw == Answers.DIETF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.vegetarian, Answers.VEGETARIANT, Answers.VEGETARIANF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Vegan?"
+when
+    Response(que == Questions.vegetarian, anw == Answers.VEGETARIANT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.vegan, Answers.VEGANT, Answers.VEGANF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Pizza?"
+when
+    Response(que == Questions.vegetarian, anw == Answers.VEGETARIANF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.pizza, Answers.PIZZAT, Answers.PIZZAF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Parents?"
+when
+    Response(que == Questions.pizza, anw == Answers.PIZZAT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.parents, Answers.PARENTST, Answers.PARENTSF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Impress?"
+when
+    Response(que == Questions.parents, anw == Answers.PARENTSF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.impress, Answers.IMPRESST, Answers.IMPRESSF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Cleaning?"
+when
+    Response(que == Questions.pizza, anw == Answers.PIZZAF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.cleaning, Answers.CLEANINGT, Answers.CLEANINGF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Who?"
+when
+    Response(que == Questions.cleaning, anw == Answers.CLEANINGF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.who, Answers.WHOT, Answers.WHOF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Thirsty?"
+when
+    Response(que == Questions.who, anw == Answers.WHOF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.thirsty, Answers.THIRSTYT, Answers.THIRSTYF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Breakfast?"
+when
+    Response(que == Questions.thirsty, anw == Answers.THIRSTYF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.breakfast, Answers.BREAKFASTT, Answers.BREAKFASTF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Summer?"
+when
+    Response(que == Questions.breakfast, anw == Answers.BREAKFASTT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.summer, Answers.SUMMERT, Answers.SUMMERF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Benes?"
+when
+    Response(que == Questions.summer, anw == Answers.SUMMERT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.summer, Answers.BENEST, Answers.BENESF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Jewish?"
+when
+    Response(que == Questions.breakfast, anw == Answers.BREAKFASTF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.jewish, Answers.JEWISHT, Answers.JEWISHF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Wow?"
+when
+    Response(que == Questions.jewish, anw == Answers.JEWISHF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.wow, Answers.WOWT, Answers.WOWF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Foreman?"
+when
+    Response(que == Questions.wow, anw == Answers.WOWF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.foreman, Answers.FOREMANT, Answers.FOREMANF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Dessert?"
+when
+    Response(que == Questions.foreman, anw == Answers.FOREMANF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.dessert, Answers.DESSERTT, Answers.DESSERTF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Childhood?"
+when
+    Response(que == Questions.dessert, anw == Answers.DESSERTT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.childhood, Answers.CHILDHOODT, Answers.CHILDHOODF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Pie?"
+when
+    Response(que == Questions.childhood, anw == Answers.CHILDHOODF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.pie, Answers.PIET, Answers.PIEF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "IceCream?"
+when
+    Response(que == Questions.pie, anw == Answers.PIEF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.icecream, Answers.ICECREAMT, Answers.ICECREAMF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Intolerant?"
+when
+    Response(que == Questions.icecream, anw == Answers.ICECREAMT.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.intolerant, Answers.INTOLERANTT, Answers.INTOLERANTF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Spoon?"
+when
+    Response(que == Questions.intolerant, anw == Answers.INTOLERANTF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.spoon, Answers.SPOONT, Answers.SPOONF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "School?"
+when
+    Response(que == Questions.dessert, anw == Answers.DESSERTF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.school, Answers.SCHOOLT, Answers.SCHOOLF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Drunk?"
+when
+    Response(que == Questions.school, anw == Answers.SCHOOLF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.drunk, Answers.DRUNKT, Answers.DRUNKF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Ethnic?"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.ethnic, Answers.ETHNICT, Answers.ETHNICF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Chain?"
+when
+    Response(que == Questions.ethnic, anw == Answers.ETHNICF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.chain, Answers.CHAINT, Answers.CHAINF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+rule "Oven?"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINF.getFullName());
+then
+    GUI_question gui = make_question_2(Questions.oven, Answers.OVENT, Answers.OVENF);
+    show_question(frame, gui, kcontext.getKieRuntime());
+end;
+
+
+
+
+// Reguły do końcowych opcji (TODO)
+
+rule "Micro Magic"
+when
+    Response(que == Questions.japan, anw == Answers.JAPANT.getFullName());
+then
+    show_result(frame, Results.micro_magic);
+end;
+
+rule "Great Value"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.great_value);
+end;
+
+rule "Country Rick"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.country_rick);
+end;
+
+rule "Tinas Burrito"
+when
+    Response(que == Questions.unemp, anw == Answers.UNEMPT.getFullName());
+then
+    show_result(frame, Results.burrito);
+end;
+
+rule "fish"
+when
+    Response(que == Questions.alaska, anw == Answers.ALASKAT.getFullName());
+then
+    show_result(frame, Results.fish);
+end;
+
+rule "Smart Ones Dessert"
+when
+    Response(que == Questions.diet, anw == Answers.DIETT.getFullName());
+then
+    show_result(frame, Results.smart_ones);
+end;
+
+rule "Slim a Bear Ice Cream"
+when
+    Response(que == Questions.diet, anw == Answers.DIETT.getFullName());
+then
+    show_result(frame, Results.slim_a_bear);
+end;
+
+rule "Lean Cuisine Ravioli"
+when
+    Response(que == Questions.diet, anw == Answers.DIETT.getFullName());
+then
+    show_result(frame, Results.lean_cuisine);
+end;
+
+rule "Smart Ones Rice"
+when
+    Response(que == Questions.diet, anw == Answers.DIETT.getFullName());
+then
+    show_result(frame, Results.smart_ones_rice);
+end;
+
+rule "Weight Watchers"
+when
+    Response(que == Questions.diet, anw == Answers.DIETT.getFullName());
+then
+    show_result(frame, Results.weight_watchers);
+end;
+
+rule "Enchilada"
+when
+    Response(que == Questions.vegan, anw == Answers.VEGANF.getFullName());
+then
+    show_result(frame, Results.enchilada);
+end;
+
+rule "Chesse & Green chile Tamales"
+when
+    Response(que == Questions.vegan, anw == Answers.VEGANF.getFullName());
+then
+    show_result(frame, Results.cheese);
+end;
+
+rule "Tofurky Vegetarian Room"
+when
+    Response(que == Questions.vegan, anw == Answers.VEGANT.getFullName());
+then
+    show_result(frame, Results.tofurky);
+end;
+
+rule "Boca Burgers"
+when
+    Response(que == Questions.vegan, anw == Answers.VEGANT.getFullName());
+then
+    show_result(frame, Results.boca);
+end;
+
+rule "Crisp Crust"
+when
+    Response(que == Questions.parents, anw == Answers.PARENTST.getFullName());
+then
+    show_result(frame, Results.crisp_crust);
+end;
+
+rule "Tombstone Brick Oven Style"
+when
+    Response(que == Questions.parents, anw == Answers.PARENTST.getFullName());
+then
+    show_result(frame, Results.tombstone);
+end;
+
+rule "Tony's Original Crust"
+when
+    Response(que == Questions.parents, anw == Answers.PARENTST.getFullName());
+then
+    show_result(frame, Results.tony);
+end;
+
+rule "Celeste Pizza"
+when
+    Response(que == Questions.parents, anw == Answers.PARENTST.getFullName());
+then
+    show_result(frame, Results.celeste);
+end;
+
+rule "Stone Hearth Pizza"
+when
+    Response(que == Questions.impress, anw == Answers.IMPRESSF.getFullName());
+then
+    show_result(frame, Results.stone_hearth);
+end;
+
+rule "Di Giorno For One Crust"
+when
+    Response(que == Questions.impress, anw == Answers.IMPRESSF.getFullName());
+then
+    show_result(frame, Results.di_giorno);
+end;
+
+rule "Freschetta Naturally Rising"
+when
+    Response(que == Questions.impress, anw == Answers.IMPRESSF.getFullName());
+then
+    show_result(frame, Results.freschetta);
+end;
+
+rule "California Crispy Thin Crust"
+when
+    Response(que == Questions.impress, anw == Answers.IMPRESST.getFullName());
+then
+    show_result(frame, Results.california);
+end;
+
+rule "Kashi Tomato Pizza"
+when
+    Response(que == Questions.impress, anw == Answers.IMPRESST.getFullName());
+then
+    show_result(frame, Results.kashi);
+end;
+
+rule "Muffin Tops"
+when
+    Response(que == Questions.benes, anw == Answers.BENEST.getFullName());
+then
+    show_result(frame, Results.muffin_tops);
+end;
+
+rule "Homestyle Waffels"
+when
+    Response(que == Questions.benes, anw == Answers.BENESF.getFullName());
+then
+    show_result(frame, Results.homestyle);
+end;
+
+rule "Toaster Sticks/Pancakes"
+when
+    Response(que == Questions.benes, anw == Answers.BENESF.getFullName());
+then
+    show_result(frame, Results.toaster_sticks);
+end;
+
+rule "Bob Evans Brunch Bowls"
+when
+    Response(que == Questions.summer, anw == Answers.SUMMERF.getFullName());
+then
+    show_result(frame, Results.bob_evans);
+end;
+
+rule "Toaster Bagel Shoppe"
+when
+    Response(que == Questions.summer, anw == Answers.SUMMERF.getFullName());
+then
+    show_result(frame, Results.bagel_shoppe);
+end;
+
+rule "Croissant Sandwiches"
+when
+    Response(que == Questions.summer, anw == Answers.SUMMERF.getFullName());
+then
+    show_result(frame, Results.croissant);
+end;
+
+rule "Toaster Strudel"
+when
+    Response(que == Questions.summer, anw == Answers.SUMMERF.getFullName());
+then
+    show_result(frame, Results.toaster_strudel);
+end;
+
+rule "Popside OrangeCherryGrape"
+when
+    Response(que == Questions.childhood, anw == Answers.CHILDHOODT.getFullName());
+then
+    show_result(frame, Results.orange);
+end;
+
+rule "100 Otter*Pops"
+when
+    Response(que == Questions.childhood, anw == Answers.CHILDHOODT.getFullName());
+then
+    show_result(frame, Results.otter);
+end;
+
+rule "Good Humor Strawberry Shortcake"
+when
+    Response(que == Questions.childhood, anw == Answers.CHILDHOODT.getFullName());
+then
+    show_result(frame, Results.humor);
+end;
+
+rule "Mrs. Smith's"
+when
+    Response(que == Questions.pie, anw == Answers.PIET.getFullName());
+then
+    show_result(frame, Results.smith);
+end;
+
+rule "Edwards Oreo Cream Pie"
+when
+    Response(que == Questions.pie, anw == Answers.PIET.getFullName());
+then
+    show_result(frame, Results.edwards);
+end;
+
+rule "SaraLee Dutch Apple Oven Fresh"
+when
+    Response(que == Questions.pie, anw == Answers.PIET.getFullName());
+then
+    show_result(frame, Results.dutch);
+end;
+
+rule "Lattice Aplle Pie"
+when
+    Response(que == Questions.pie, anw == Answers.PIET.getFullName());
+then
+    show_result(frame, Results.lattice);
+end;
+
+rule "SoDelicious Dairy Free"
+when
+    Response(que == Questions.intolerant, anw == Answers.INTOLERANTT.getFullName());
+then
+    show_result(frame, Results.dairy);
+end;
+
+rule "Ben&Jerry Ice Cream Blue"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.ben);
+end;
+
+rule "Breyers Reese's"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.reese);
+end;
+
+rule "Hoagen-Dazs five vanilla bean"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.five);
+end;
+
+rule "Blue bell Ice Cream"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.bell);
+end;
+
+rule "Edy's Slow Churned"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.edy);
+end;
+
+rule "Turkey Hill Chocolate Peanut Butter Cup"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONT.getFullName());
+then
+    show_result(frame, Results.hill);
+end;
+
+rule "Klondike The Original"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONF.getFullName());
+then
+    show_result(frame, Results.klondike);
+end;
+
+rule "Toll House Chocolate Chip"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONF.getFullName());
+then
+    show_result(frame, Results.toll);
+end;
+
+rule "DrumStick"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONF.getFullName());
+then
+    show_result(frame, Results.drumstick);
+end;
+
+rule "Fat Boy Cookies&Cream"
+when
+    Response(que == Questions.spoon, anw == Answers.SPOONF.getFullName());
+then
+    show_result(frame, Results.fatboy);
+end;
+
+rule "Puff Pastry Turnovers"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINF.getFullName());
+then
+    show_result(frame, Results.pastry);
+end;
+
+rule "SaraLee Classic"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINF.getFullName());
+then
+    show_result(frame, Results.saralee);
+end;
+rule "Chocolate Fudge"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINF.getFullName());
+then
+    show_result(frame, Results.fudge);
+end;
+
+rule "CoolWhip"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINF.getFullName());
+then
+    show_result(frame, Results.coolwhip);
+end;
+
+rule "Ore-Ida Steak Fries"
+when
+    Response(que == Questions.oven, anw == Answers.OVENT.getFullName());
+then
+    show_result(frame, Results.fries);
+end;
+
+rule "Poppers Cream Cheese"
+when
+    Response(que == Questions.oven, anw == Answers.OVENT.getFullName());
+then
+    show_result(frame, Results.poppers);
+end;
+
+rule "Ore-Ida Tater Tots"
+when
+    Response(que == Questions.oven, anw == Answers.OVENT.getFullName());
+then
+    show_result(frame, Results.tater);
+end;
+
+rule "Michael Angelo's"
+when
+    Response(que == Questions.oven, anw == Answers.OVENT.getFullName());
+then
+    show_result(frame, Results.angelo);
+end;
+
+rule "Smucker's Uncrustables"
+when
+    Response(que == Questions.oven, anw == Answers.OVENF.getFullName());
+then
+    show_result(frame, Results.smuckers);
+end;
+
+rule "Banquet Beef Pot Pie"
+when
+    Response(que == Questions.cleaning, anw == Answers.CLEANINGT.getFullName());
+then
+    show_result(frame, Results.banquetbeef);
+end;
+
+rule "Swanson Classics"
+when
+    Response(que == Questions.cleaning, anw == Answers.CLEANINGT.getFullName());
+then
+    show_result(frame, Results.swanson);
+end;
+
+rule "Banquet"
+when
+    Response(que == Questions.cleaning, anw == Answers.CLEANINGT.getFullName());
+then
+    show_result(frame, Results.banquet);
+end;
+
+rule "Ben&Jerry Ice Cream Red"
+when
+    Response(que == Questions.who, anw == Answers.WHOT.getFullName());
+then
+    show_result(frame, Results.jerry);
+end;
+
+rule "Minute Maid Limeade"
+when
+    Response(que == Questions.thirsty, anw == Answers.THIRSTYT.getFullName());
+then
+    show_result(frame, Results.maid);
+end;
+
+rule "Gabila's 4 Potato Knishes"
+when
+    Response(que == Questions.jewish, anw == Answers.JEWISHT.getFullName());
+then
+    show_result(frame, Results.gabila);
+end;
+
+rule "Hungry-Man Gamer Grub"
+when
+    Response(que == Questions.wow, anw == Answers.WOWT.getFullName());
+then
+    show_result(frame, Results.hungry);
+end;
+
+rule "Boneless Chicken Breast Portions"
+when
+    Response(que == Questions.foreman, anw == Answers.FOREMANT.getFullName());
+then
+    show_result(frame, Results.boneless);
+end;
+
+rule "Kid Cuisine"
+when
+    Response(que == Questions.school, anw == Answers.SCHOOLT.getFullName());
+then
+    show_result(frame, Results.cuisine);
+end;
+
+rule "French Bread Pizza"
+when
+    Response(que == Questions.school, anw == Answers.SCHOOLT.getFullName());
+then
+    show_result(frame, Results.french);
+end;
+
+rule "Super Pretzel"
+when
+    Response(que == Questions.school, anw == Answers.SCHOOLT.getFullName());
+then
+    show_result(frame, Results.pretzel);
+end;
+
+rule "White Castle Hamburger"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.castle);
+end;
+
+rule "Hot Pockets"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.pocket);
+end;
+
+rule "Totino's Pizza Rolls Pepperoni"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.rolls);
+end;
+
+rule "Bagel-fuls Original"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.bagel);
+end;
+
+rule "Bagel Bites Cheese"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.bites);
+end;
+
+rule "Corn Dogs"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.dogs);
+end;
+
+rule "Fish Sticks"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.sticks);
+end;
+
+rule "Friday's Popato Skins"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.friday);
+end;
+
+rule "Tyson Anytizers"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.tyson);
+end;
+
+rule "Pancakes & Sausage"
+when
+    Response(que == Questions.drunk, anw == Answers.DRUNKT.getFullName());
+then
+    show_result(frame, Results.sausage);
+end;
+
+rule "Tai&Pei New"
+when
+    Response(que == Questions.ethnic, anw == Answers.ETHNICT.getFullName());
+then
+    show_result(frame, Results.pei);
+end;
+
+rule "Chicken Tikka Masala"
+when
+    Response(que == Questions.ethnic, anw == Answers.ETHNICT.getFullName());
+then
+    show_result(frame, Results.masala);
+end;
+
+rule "Ling Ling Potstickers"
+when
+    Response(que == Questions.ethnic, anw == Answers.ETHNICT.getFullName());
+then
+    show_result(frame, Results.ling);
+end;
+
+rule "Don Miguel Beef & Cheese Mini Tacos"
+when
+    Response(que == Questions.ethnic, anw == Answers.ETHNICT.getFullName());
+then
+    show_result(frame, Results.miguel);
+end;
+
+rule "Claim Jumper Spaghetti"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINT.getFullName());
+then
+    show_result(frame, Results.jumper);
+end;
+
+rule "Marie Callenders"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINT.getFullName());
+then
+    show_result(frame, Results.marie);
+end;
+
+rule "Boston Market Turkey Medalion"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINT.getFullName());
+then
+    show_result(frame, Results.boston);
+end;
+
+rule "Stouffer Macaroni & Beef"
+when
+    Response(que == Questions.chain, anw == Answers.CHAINT.getFullName());
+then
+    show_result(frame, Results.stouffer);
+end;
+

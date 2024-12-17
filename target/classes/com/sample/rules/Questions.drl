@@ -1,0 +1,39 @@
+package mypackage
+
+declare enum Questions
+	japan("Are you in Japan?"),
+	unemp("Are you on unemployment?"),
+	alaska("Are you in Alaska?"),
+	diet("Are you on a diet?"),
+	vegetarian("Are you a vegetarian?"),
+	vegan("Are you vegan?"),
+	pizza("Do you want pizza?"),
+	parents("Are you still living with you parents?"),
+	cleaning("Do you need a good \"cleaning\"?"),
+	who("Are you Doctor Who?"),
+	impress("Are you trying to impress?"),
+	thirsty("Are you thirsty?"),
+	breakfast("Do you want breakfast?"),
+	summer("It is summer 2010?"),
+	jewish("Are you Jewish?"),
+	benes("Are you Elaine Benes?"),
+	wow("Are you playing Wow?"),
+	foreman("Are you using a Foreman?"),
+	dessert("Do you want dessert?"),
+	childhood("Are you trying to relive childhood?"),
+	school("Did you just get home from school?"),
+	drunk("Are you high and/or drunk?"),
+	pie("Do you want pie?"),
+	icecream("Do you want ice cream?"),
+	intolerant("Are you lactose intolerant?"),
+	spoon("Do you have a spoon?"),
+	ethnic("Do you want \"ethnic\" food?"),
+	chain("Do you like chain restaurants?"),
+	oven("Do you know how to pre-heat an oven?")
+	;
+    fullName : String
+end
+
+declare Question
+	question : Questions
+end
